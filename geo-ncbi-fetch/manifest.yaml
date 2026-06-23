@@ -1,0 +1,29 @@
+name: geo-ncbi-fetch
+version: 1.2.0
+description: >
+  Declarative manifest for the NCBI GEO metadata extraction skill.
+  The main axis is the source: GSE (series), GSM (sample), or GPL (platform).
+  Each maps to the same extraction workflow with db parameter variation.
+
+always_load:
+  - static/core/tools.md
+  - static/core/workflow.md
+
+axes:
+  source:
+    detect: |
+      Detect the GEO accession type from the input list:
+        GSE  — GEO Series (dataset-level metadata)
+        GSM  — GEO Sample (individual sample metadata)
+        GPL  — GEO Platform (array/sequencer platform metadata)
+      Mixed lists are supported; each accession is classified individually.
+    values:
+      gse: references/ncbi-guidelines.md
+      gsm: references/ncbi-guidelines.md
+      gpl: references/ncbi-guidelines.md
+    multi: true
+
+references:
+  on_demand:
+    - condition: detailed NCBI usage policy, rate limits, and API key setup
+      path: references/ncbi-guidelines.md
