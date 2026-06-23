@@ -165,7 +165,7 @@ python scripts/build_excel.py \
 | 版本 | 日期 | 更新 |
 |------|------|------|
 | v1.2.0 | 2025-06 | 修复 `clean()` 正则、pmids 切到 `PubMedIds` 字段、新增 `sample_types`、内置 `build_excel.py`、双输出策略 |
-| v1.1.0 | 2025-06 | conda 环境选择、批次断点续跑、code-simplifier 优化 |
+| v1.1.0 | 2025-06 | conda 环境选择、批次断点续跑 |
 | v1.0.0 | 2025-06 | 初始版本：基础提取 + JSON 输出 |
 
 ## 作者
